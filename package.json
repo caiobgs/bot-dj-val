@@ -20,5 +20,8 @@
     "ffmpeg-static": "^4.4.0",
     "libsodium-wrappers": "^0.7.9",
     "ytdl-core": "^4.9.1"
+  },
+  "engines":{
+    "node":"16.13.1"
   }
 }
