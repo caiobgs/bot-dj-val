@@ -18,11 +18,14 @@ client.once('ready', teste => {
 
 client.on('messageCreate', async message => {
 
-    const botAction = message.content.split(" ")[0]
+    const botAction = message.content.match("-[a-zA-Z]+")
 
-    const action =  getAction(botAction)
+    if (botAction) {
+        const action =  getAction(botAction[0])
+        action.validator(message)
+    }
 
-    if (action)  action.validator(message)
+   
    
 
 });
